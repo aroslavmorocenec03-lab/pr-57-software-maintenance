@@ -1,0 +1,24 @@
+Определение проектов для восстановления...
+  Все проекты обновлены для восстановления.
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\bin\Release\net10.0\DemoApp.dll
+  DemoApp.Checks -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\bin\Release\net10.0\DemoApp.Checks.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:02.03
+
+PASS: Adult boundary at 18
+PASS: Underage boundary at 17
+PASS: Zero age is accepted
+PASS: Upper age limit
+PASS: Negative age is rejected
+PASS: Non-numeric age is rejected
+PASS: Empty age is rejected
+PASS: Age above range is rejected
+PASS: Trims surrounding name spaces
+PASS: Empty name then valid input
+PASS: EOF before name
+PASS: EOF before age
+Result: 12 passed, 0 failed
