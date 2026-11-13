@@ -480,3 +480,7 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Keep actual verification evidence in the repository.
+!evidence/
+!evidence/*.log
