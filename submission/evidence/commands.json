@@ -1,0 +1,506 @@
+[
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api user --jq .login",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "aroslavmorocenec03-lab",
+    "time": "2026-11-13T22:31:27"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe repo create aroslavmorocenec03-lab/pr-57-software-maintenance --public --description \"ПР-57. Супровід програм: dev, master, release/1.1, Pull Request і тег v1.0.\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance",
+    "time": "2026-11-13T22:31:33"
+  },
+  {
+    "command": "git clone https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "Cloning into 'C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo'...\nwarning: You appear to have cloned an empty repository.",
+    "time": "2026-11-13T22:31:33"
+  },
+  {
+    "command": "git config user.name \"Ярослав Мороченець\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "git config user.email 346407698+aroslavmorocenec03-lab@users.noreply.github.com",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "git config core.autocrlf false",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe auth setup-git",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "git checkout -b dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Switched to a new branch 'dev'",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "git add README.md",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "git commit -m \"init repo with README\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "[dev (root-commit) 206ff32] init repo with README\n 1 file changed, 13 insertions(+)\n create mode 100644 README.md",
+    "time": "2026-11-13T22:31:34"
+  },
+  {
+    "command": "git push -u origin dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n * [new branch]      dev -> dev\nbranch 'dev' set up to track 'origin/dev'.",
+    "time": "2026-11-13T22:31:37"
+  },
+  {
+    "command": "git checkout -b master",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Switched to a new branch 'master'",
+    "time": "2026-11-13T22:31:37"
+  },
+  {
+    "command": "git push -u origin master",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "remote: \nremote: Create a pull request for 'master' on GitHub by visiting:        \nremote:      https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/pull/new/master        \nremote: \nTo https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n * [new branch]      master -> master\nbranch 'master' set up to track 'origin/master'.",
+    "time": "2026-11-13T22:31:40"
+  },
+  {
+    "command": "git checkout dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Switched to branch 'dev'\nYour branch is up to date with 'origin/dev'.",
+    "time": "2026-11-13T22:31:40"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe repo edit aroslavmorocenec03-lab/pr-57-software-maintenance --default-branch dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:40"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api --method PUT repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection --input C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\master-protection-request.json --jq {required_status_checks,enforce_admins,required_pull_request_reviews,allow_force_pushes,allow_deletions}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"allow_deletions\":{\"enabled\":false},\"allow_force_pushes\":{\"enabled\":false},\"enforce_admins\":{\"enabled\":true,\"url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/enforce_admins\"},\"required_pull_request_reviews\":{\"dismiss_stale_reviews\":true,\"require_code_owner_reviews\":false,\"require_last_push_approval\":false,\"required_approving_review_count\":0,\"url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_pull_request_reviews\"},\"required_status_checks\":{\"checks\":[{\"app_id\":null,\"context\":\"local-build-and-tests\"}],\"contexts\":[\"local-build-and-tests\"],\"contexts_url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks/contexts\",\"strict\":true,\"url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks\"}}",
+    "time": "2026-11-13T22:31:41"
+  },
+  {
+    "command": "git checkout dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Already on 'dev'\nYour branch is up to date with 'origin/dev'.",
+    "time": "2026-11-13T22:31:41"
+  },
+  {
+    "command": "dotnet new console -n DemoApp --framework net10.0",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Шаблон \"Консольное приложение\" успешно создан.\n\nИдет обработка действий после создания...\nВосстановление C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp\\DemoApp.csproj:\n  Определение проектов для восстановления...\n  Восстановлен C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp\\DemoApp.csproj (за 99 мс).\nВосстановление выполнено.",
+    "time": "2026-11-13T22:31:45"
+  },
+  {
+    "command": "dotnet new gitignore",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Шаблон \"файл gitignore dotnet\" успешно создан.",
+    "time": "2026-11-13T22:31:45"
+  },
+  {
+    "command": "dotnet new console -n DemoApp.Checks --framework net10.0",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Шаблон \"Консольное приложение\" успешно создан.\n\nИдет обработка действий после создания...\nВосстановление C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\DemoApp.Checks.csproj:\n  Определение проектов для восстановления...\n  Восстановлен C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\DemoApp.Checks.csproj (за 121 мс).\nВосстановление выполнено.",
+    "time": "2026-11-13T22:31:47"
+  },
+  {
+    "command": "dotnet add DemoApp.Checks/DemoApp.Checks.csproj reference DemoApp/DemoApp.csproj",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Ссылка \"..\\DemoApp\\DemoApp.csproj\" добавлена в проект.",
+    "time": "2026-11-13T22:31:48"
+  },
+  {
+    "command": "dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Определение проектов для восстановления...\n  Восстановлен C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\DemoApp.Checks.csproj (за 167 мс).\n  Проектов обновлено для восстановления: 1 из 2.\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp\\bin\\Release\\net10.0\\DemoApp.dll\n  DemoApp.Checks -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\bin\\Release\\net10.0\\DemoApp.Checks.dll\n\nСборка успешно завершена.\n    Предупреждений: 0\n    Ошибок: 0\n\nПрошло времени 00:00:08.06",
+    "time": "2026-11-13T22:31:56"
+  },
+  {
+    "command": "dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "PASS: Ukrainian name greeting\nPASS: Trims surrounding spaces\nPASS: Rejects blank name then accepts next\nPASS: EOF before name\nPASS: EOF after invalid name\nResult: 5 passed, 0 failed",
+    "time": "2026-11-13T22:31:57"
+  },
+  {
+    "command": "dotnet run --project DemoApp/DemoApp.csproj --configuration Release --no-build",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Введіть ваше ім’я: Вітаю Ярослав!",
+    "time": "2026-11-13T22:31:59"
+  },
+  {
+    "command": "git add .",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:31:59"
+  },
+  {
+    "command": "git commit -m \"feat: add initial console app (ask name, print)\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "[dev 145f035] feat: add initial console app (ask name, print)\n 7 files changed, 571 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 DemoApp.Checks/DemoApp.Checks.csproj\n create mode 100644 DemoApp.Checks/Program.cs\n create mode 100644 DemoApp/DemoApp.csproj\n create mode 100644 DemoApp/GreetingDialog.cs\n create mode 100644 DemoApp/Program.cs\n create mode 100644 scripts/Verify.ps1",
+    "time": "2026-11-13T22:31:59"
+  },
+  {
+    "command": "git push",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n   206ff32..145f035  dev -> dev",
+    "time": "2026-11-13T22:32:02"
+  },
+  {
+    "command": "git rev-parse HEAD",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "145f035b07b9334693dfd3a220803c20effe4164",
+    "time": "2026-11-13T22:32:02"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/145f035b07b9334693dfd3a220803c20effe4164 --input C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\v1.0-status.json --jq {state,context,target_url}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"context\":\"local-build-and-tests\",\"state\":\"success\",\"target_url\":\"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/145f035b07b9334693dfd3a220803c20effe4164/evidence/v1.0-checks.log\"}",
+    "time": "2026-11-13T22:32:02"
+  },
+  {
+    "command": "git add .gitignore evidence/v1.0-checks.log",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:34:31"
+  },
+  {
+    "command": "git commit -m \"docs: retain build and verification evidence\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "[dev a68787f] docs: retain build and verification evidence\n 2 files changed, 22 insertions(+)\n create mode 100644 evidence/v1.0-checks.log",
+    "time": "2026-11-13T22:34:32"
+  },
+  {
+    "command": "git push",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n   145f035..a68787f  dev -> dev",
+    "time": "2026-11-13T22:34:34"
+  },
+  {
+    "command": "git rev-parse HEAD",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "a68787f9482743d112543a2911b4b69c983201b8",
+    "time": "2026-11-13T22:34:34"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/a68787f9482743d112543a2911b4b69c983201b8 --input C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\v1.0-status.json --jq {state,context,target_url}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"context\":\"local-build-and-tests\",\"state\":\"success\",\"target_url\":\"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/a68787f9482743d112543a2911b4b69c983201b8/evidence/v1.0-checks.log\"}",
+    "time": "2026-11-13T22:34:35"
+  },
+  {
+    "command": "git checkout master",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Switched to branch 'master'\nYour branch is up to date with 'origin/master'.",
+    "time": "2026-11-13T22:35:00"
+  },
+  {
+    "command": "git pull --ff-only origin master",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "From https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance\n * branch            master     -> FETCH_HEAD\n   206ff32..3604ec4  master     -> origin/master\nUpdating 206ff32..3604ec4\nFast-forward\n .gitignore                           | 486 +++++++++++++++++++++++++++++++++++\n DemoApp.Checks/DemoApp.Checks.csproj |  14 +\n DemoApp.Checks/Program.cs            |  25 ++\n DemoApp/DemoApp.csproj               |  10 +\n DemoApp/GreetingDialog.cs            |  26 ++\n DemoApp/Program.cs                   |   6 +\n evidence/v1.0-checks.log             |  18 ++\n scripts/Verify.ps1                   |   8 +\n 8 files changed, 593 insertions(+)\n create mode 100644 .gitignore\n create mode 100644 DemoApp.Checks/DemoApp.Checks.csproj\n create mode 100644 DemoApp.Checks/Program.cs\n create mode 100644 DemoApp/DemoApp.csproj\n create mode 100644 DemoApp/GreetingDialog.cs\n create mode 100644 DemoApp/Program.cs\n create mode 100644 evidence/v1.0-checks.log\n create mode 100644 scripts/Verify.ps1",
+    "time": "2026-11-13T22:35:01"
+  },
+  {
+    "command": "dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Определение проектов для восстановления...\n  Все проекты обновлены для восстановления.\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp\\bin\\Release\\net10.0\\DemoApp.dll\n  DemoApp.Checks -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\bin\\Release\\net10.0\\DemoApp.Checks.dll\n\nСборка успешно завершена.\n    Предупреждений: 0\n    Ошибок: 0\n\nПрошло времени 00:00:02.33",
+    "time": "2026-11-13T22:35:04"
+  },
+  {
+    "command": "dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "PASS: Ukrainian name greeting\nPASS: Trims surrounding spaces\nPASS: Rejects blank name then accepts next\nPASS: EOF before name\nPASS: EOF after invalid name\nResult: 5 passed, 0 failed",
+    "time": "2026-11-13T22:35:05"
+  },
+  {
+    "command": "git rev-parse HEAD",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "3604ec4a066ae3283883575eeabfd4dc8e68bebd",
+    "time": "2026-11-13T22:35:05"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/3604ec4a066ae3283883575eeabfd4dc8e68bebd --input C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\v1.0-status.json --jq {state,context,target_url}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"context\":\"local-build-and-tests\",\"state\":\"success\",\"target_url\":\"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/3604ec4a066ae3283883575eeabfd4dc8e68bebd/evidence/v1.0-checks.log\"}",
+    "time": "2026-11-13T22:35:06"
+  },
+  {
+    "command": "git tag -a v1.0 -m \"release: 1.0 — ask name and print\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:35:06"
+  },
+  {
+    "command": "git push origin v1.0",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n * [new tag]         v1.0 -> v1.0",
+    "time": "2026-11-13T22:35:09"
+  },
+  {
+    "command": "git checkout dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Switched to branch 'dev'\nYour branch is up to date with 'origin/dev'.",
+    "time": "2026-11-13T22:35:09"
+  },
+  {
+    "command": "git merge --ff-only origin/master",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Updating a68787f..3604ec4\nFast-forward",
+    "time": "2026-11-13T22:35:09"
+  },
+  {
+    "command": "dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Определение проектов для восстановления...\n  Все проекты обновлены для восстановления.\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp\\bin\\Release\\net10.0\\DemoApp.dll\n  DemoApp.Checks -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\bin\\Release\\net10.0\\DemoApp.Checks.dll\n\nСборка успешно завершена.\n    Предупреждений: 0\n    Ошибок: 0\n\nПрошло времени 00:00:02.03",
+    "time": "2026-11-13T22:35:12"
+  },
+  {
+    "command": "dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "PASS: Adult boundary at 18\nPASS: Underage boundary at 17\nPASS: Zero age is accepted\nPASS: Upper age limit\nPASS: Negative age is rejected\nPASS: Non-numeric age is rejected\nPASS: Empty age is rejected\nPASS: Age above range is rejected\nPASS: Trims surrounding name spaces\nPASS: Empty name then valid input\nPASS: EOF before name\nPASS: EOF before age\nResult: 12 passed, 0 failed",
+    "time": "2026-11-13T22:35:13"
+  },
+  {
+    "command": "dotnet run --project DemoApp/DemoApp.csproj --configuration Release --no-build",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Введіть ваше ім’я: Введіть ваш вік: Вітаю Ярослав!\nІм’я: Ярослав. Вік: 17.\nСтатус: неповнолітня особа.",
+    "time": "2026-11-13T22:35:14"
+  },
+  {
+    "command": "git add .",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:35:14"
+  },
+  {
+    "command": "git commit -m \"feat: ask age and print adult/underage in console\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "[dev 9456d2e] feat: ask age and print adult/underage in console\n 4 files changed, 78 insertions(+), 19 deletions(-)\n create mode 100644 evidence/v1.1-checks.log",
+    "time": "2026-11-13T22:35:15"
+  },
+  {
+    "command": "git push",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n   a68787f..9456d2e  dev -> dev",
+    "time": "2026-11-13T22:35:17"
+  },
+  {
+    "command": "git rev-parse HEAD",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "9456d2eec6067159518229717da0b501ff80224c",
+    "time": "2026-11-13T22:35:17"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/9456d2eec6067159518229717da0b501ff80224c --input C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\v1.1-status.json --jq {state,context,target_url}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"context\":\"local-build-and-tests\",\"state\":\"success\",\"target_url\":\"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/9456d2eec6067159518229717da0b501ff80224c/evidence/v1.1-checks.log\"}",
+    "time": "2026-11-13T22:35:18"
+  },
+  {
+    "command": "git checkout dev",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Already on 'dev'\nYour branch is up to date with 'origin/dev'.",
+    "time": "2026-11-13T22:35:18"
+  },
+  {
+    "command": "git pull --ff-only",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Already up to date.",
+    "time": "2026-11-13T22:35:19"
+  },
+  {
+    "command": "git checkout -b release/1.1",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Switched to a new branch 'release/1.1'",
+    "time": "2026-11-13T22:35:19"
+  },
+  {
+    "command": "git push -u origin release/1.1",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "remote: \nremote: Create a pull request for 'release/1.1' on GitHub by visiting:        \nremote:      https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/pull/new/release/1.1        \nremote: \nTo https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n * [new branch]      release/1.1 -> release/1.1\nbranch 'release/1.1' set up to track 'origin/release/1.1'.",
+    "time": "2026-11-13T22:35:22"
+  },
+  {
+    "command": "git add VERSION.md CHANGELOG.md",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:35:22"
+  },
+  {
+    "command": "git commit -m \"docs: prepare version 1.1.0-rc.1 and changelog\"",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "[release/1.1 f3c8c28] docs: prepare version 1.1.0-rc.1 and changelog\n 2 files changed, 18 insertions(+)\n create mode 100644 CHANGELOG.md\n create mode 100644 VERSION.md",
+    "time": "2026-11-13T22:35:22"
+  },
+  {
+    "command": "git push",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git\n   9456d2e..f3c8c28  release/1.1 -> release/1.1",
+    "time": "2026-11-13T22:35:24"
+  },
+  {
+    "command": "dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "Определение проектов для восстановления...\n  Все проекты обновлены для восстановления.\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp\\bin\\Release\\net10.0\\DemoApp.dll\n  DemoApp.Checks -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo\\DemoApp.Checks\\bin\\Release\\net10.0\\DemoApp.Checks.dll\n\nСборка успешно завершена.\n    Предупреждений: 0\n    Ошибок: 0\n\nПрошло времени 00:00:03.48",
+    "time": "2026-11-13T22:35:28"
+  },
+  {
+    "command": "dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "PASS: Adult boundary at 18\nPASS: Underage boundary at 17\nPASS: Zero age is accepted\nPASS: Upper age limit\nPASS: Negative age is rejected\nPASS: Non-numeric age is rejected\nPASS: Empty age is rejected\nPASS: Age above range is rejected\nPASS: Trims surrounding name spaces\nPASS: Empty name then valid input\nPASS: EOF before name\nPASS: EOF before age\nResult: 12 passed, 0 failed",
+    "time": "2026-11-13T22:35:30"
+  },
+  {
+    "command": "git rev-parse HEAD",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "f3c8c28ce71a0602514dd36912a6f50f854f666d",
+    "time": "2026-11-13T22:35:30"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/f3c8c28ce71a0602514dd36912a6f50f854f666d --input C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\v1.1-status.json --jq {state,context,target_url}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"context\":\"local-build-and-tests\",\"state\":\"success\",\"target_url\":\"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/f3c8c28ce71a0602514dd36912a6f50f854f666d/evidence/v1.1-checks.log\"}",
+    "time": "2026-11-13T22:35:31"
+  },
+  {
+    "command": "git log --oneline --graph --all --decorate",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "* f3c8c28 (HEAD -> release/1.1, origin/release/1.1) docs: prepare version 1.1.0-rc.1 and changelog\n* 9456d2e (origin/dev, origin/HEAD, dev) feat: ask age and print adult/underage in console\n*   3604ec4 (tag: v1.0, origin/master, master) Merge pull request #1: release 1.0\n|\\  \n| * a68787f docs: retain build and verification evidence\n| * 145f035 feat: add initial console app (ask name, print)\n|/  \n* 206ff32 init repo with README",
+    "time": "2026-11-13T22:35:31"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api repos/aroslavmorocenec03-lab/pr-57-software-maintenance --jq {full_name,default_branch,visibility,html_url}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"default_branch\":\"dev\",\"full_name\":\"aroslavmorocenec03-lab/pr-57-software-maintenance\",\"html_url\":\"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance\",\"visibility\":\"public\"}",
+    "time": "2026-11-13T22:35:32"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\Git-Labs\\gh\\bin\\gh.exe api repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection --jq {required_status_checks,enforce_admins,required_pull_request_reviews,allow_force_pushes,allow_deletions}",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "{\"allow_deletions\":{\"enabled\":false},\"allow_force_pushes\":{\"enabled\":false},\"enforce_admins\":{\"enabled\":true,\"url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/enforce_admins\"},\"required_pull_request_reviews\":{\"dismiss_stale_reviews\":true,\"require_code_owner_reviews\":false,\"require_last_push_approval\":false,\"required_approving_review_count\":0,\"url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_pull_request_reviews\"},\"required_status_checks\":{\"checks\":[{\"app_id\":null,\"context\":\"local-build-and-tests\"}],\"contexts\":[\"local-build-and-tests\"],\"contexts_url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks/contexts\",\"strict\":true,\"url\":\"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks\"}}",
+    "time": "2026-11-13T22:35:32"
+  },
+  {
+    "command": "git archive --format=zip --output C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\v1.0-source.zip v1.0",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:39:21"
+  },
+  {
+    "command": "dotnet publish C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\source\\v1.0\\DemoApp\\DemoApp.csproj -c Release -r win-x64 --self-contained false -o C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\programs\\v1.0",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "Определение проектов для восстановления...\n  Восстановлен C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\source\\v1.0\\DemoApp\\DemoApp.csproj (за 121 мс).\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\source\\v1.0\\DemoApp\\bin\\Release\\net10.0\\win-x64\\DemoApp.dll\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\programs\\v1.0\\",
+    "time": "2026-11-13T22:39:24"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\programs\\v1.0\\DemoApp.exe",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "Введіть ваше ім’я: Вітаю Ярослав!",
+    "time": "2026-11-13T22:39:24"
+  },
+  {
+    "command": "git archive --format=zip --output C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\release-1.1-source.zip release/1.1",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57\\repo",
+    "exit_code": 0,
+    "output": "",
+    "time": "2026-11-13T22:39:24"
+  },
+  {
+    "command": "dotnet publish C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\source\\release-1.1\\DemoApp\\DemoApp.csproj -c Release -r win-x64 --self-contained false -o C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\programs\\release-1.1",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "Определение проектов для восстановления...\n  Восстановлен C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\source\\release-1.1\\DemoApp\\DemoApp.csproj (за 121 мс).\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\source\\release-1.1\\DemoApp\\bin\\Release\\net10.0\\win-x64\\DemoApp.dll\n  DemoApp -> C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\programs\\release-1.1\\",
+    "time": "2026-11-13T22:39:27"
+  },
+  {
+    "command": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\outputs\\ПР-57\\programs\\release-1.1\\DemoApp.exe",
+    "cwd": "C:\\Users\\ksvit\\Documents\\Codex\\2026-11-12\\d-x20\\work\\PR57",
+    "exit_code": 0,
+    "output": "Введіть ваше ім’я: Введіть ваш вік: Вітаю Ярослав!\nІм’я: Ярослав. Вік: 17.\nСтатус: неповнолітня особа.",
+    "time": "2026-11-13T22:39:27"
+  }
+]

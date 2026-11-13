@@ -1,0 +1,471 @@
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api user --jq .login
+Exit code: 0
+aroslavmorocenec03-lab
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe repo create aroslavmorocenec03-lab/pr-57-software-maintenance --public --description "ПР-57. Супровід програм: dev, master, release/1.1, Pull Request і тег v1.0."
+Exit code: 0
+https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance
+
+$ git clone https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo
+Exit code: 0
+Cloning into 'C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo'...
+warning: You appear to have cloned an empty repository.
+
+$ git config user.name "Ярослав Мороченець"
+Exit code: 0
+
+
+$ git config user.email 346407698+aroslavmorocenec03-lab@users.noreply.github.com
+Exit code: 0
+
+
+$ git config core.autocrlf false
+Exit code: 0
+
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe auth setup-git
+Exit code: 0
+
+
+$ git checkout -b dev
+Exit code: 0
+Switched to a new branch 'dev'
+
+$ git add README.md
+Exit code: 0
+
+
+$ git commit -m "init repo with README"
+Exit code: 0
+[dev (root-commit) 206ff32] init repo with README
+ 1 file changed, 13 insertions(+)
+ create mode 100644 README.md
+
+$ git push -u origin dev
+Exit code: 0
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+ * [new branch]      dev -> dev
+branch 'dev' set up to track 'origin/dev'.
+
+$ git checkout -b master
+Exit code: 0
+Switched to a new branch 'master'
+
+$ git push -u origin master
+Exit code: 0
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:        
+remote:      https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/pull/new/master        
+remote: 
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+$ git checkout dev
+Exit code: 0
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe repo edit aroslavmorocenec03-lab/pr-57-software-maintenance --default-branch dev
+Exit code: 0
+
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api --method PUT repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection --input C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\master-protection-request.json --jq {required_status_checks,enforce_admins,required_pull_request_reviews,allow_force_pushes,allow_deletions}
+Exit code: 0
+{"allow_deletions":{"enabled":false},"allow_force_pushes":{"enabled":false},"enforce_admins":{"enabled":true,"url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/enforce_admins"},"required_pull_request_reviews":{"dismiss_stale_reviews":true,"require_code_owner_reviews":false,"require_last_push_approval":false,"required_approving_review_count":0,"url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_pull_request_reviews"},"required_status_checks":{"checks":[{"app_id":null,"context":"local-build-and-tests"}],"contexts":["local-build-and-tests"],"contexts_url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks/contexts","strict":true,"url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks"}}
+
+$ git checkout dev
+Exit code: 0
+Already on 'dev'
+Your branch is up to date with 'origin/dev'.
+
+$ dotnet new console -n DemoApp --framework net10.0
+Exit code: 0
+Шаблон "Консольное приложение" успешно создан.
+
+Идет обработка действий после создания...
+Восстановление C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\DemoApp.csproj:
+  Определение проектов для восстановления...
+  Восстановлен C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\DemoApp.csproj (за 99 мс).
+Восстановление выполнено.
+
+$ dotnet new gitignore
+Exit code: 0
+Шаблон "файл gitignore dotnet" успешно создан.
+
+$ dotnet new console -n DemoApp.Checks --framework net10.0
+Exit code: 0
+Шаблон "Консольное приложение" успешно создан.
+
+Идет обработка действий после создания...
+Восстановление C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\DemoApp.Checks.csproj:
+  Определение проектов для восстановления...
+  Восстановлен C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\DemoApp.Checks.csproj (за 121 мс).
+Восстановление выполнено.
+
+$ dotnet add DemoApp.Checks/DemoApp.Checks.csproj reference DemoApp/DemoApp.csproj
+Exit code: 0
+Ссылка "..\DemoApp\DemoApp.csproj" добавлена в проект.
+
+$ dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release
+Exit code: 0
+Определение проектов для восстановления...
+  Восстановлен C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\DemoApp.Checks.csproj (за 167 мс).
+  Проектов обновлено для восстановления: 1 из 2.
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\bin\Release\net10.0\DemoApp.dll
+  DemoApp.Checks -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\bin\Release\net10.0\DemoApp.Checks.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:08.06
+
+$ dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build
+Exit code: 0
+PASS: Ukrainian name greeting
+PASS: Trims surrounding spaces
+PASS: Rejects blank name then accepts next
+PASS: EOF before name
+PASS: EOF after invalid name
+Result: 5 passed, 0 failed
+
+$ dotnet run --project DemoApp/DemoApp.csproj --configuration Release --no-build
+Exit code: 0
+Введіть ваше ім’я: Вітаю Ярослав!
+
+$ git add .
+Exit code: 0
+
+
+$ git commit -m "feat: add initial console app (ask name, print)"
+Exit code: 0
+[dev 145f035] feat: add initial console app (ask name, print)
+ 7 files changed, 571 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 DemoApp.Checks/DemoApp.Checks.csproj
+ create mode 100644 DemoApp.Checks/Program.cs
+ create mode 100644 DemoApp/DemoApp.csproj
+ create mode 100644 DemoApp/GreetingDialog.cs
+ create mode 100644 DemoApp/Program.cs
+ create mode 100644 scripts/Verify.ps1
+
+$ git push
+Exit code: 0
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+   206ff32..145f035  dev -> dev
+
+$ git rev-parse HEAD
+Exit code: 0
+145f035b07b9334693dfd3a220803c20effe4164
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/145f035b07b9334693dfd3a220803c20effe4164 --input C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\v1.0-status.json --jq {state,context,target_url}
+Exit code: 0
+{"context":"local-build-and-tests","state":"success","target_url":"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/145f035b07b9334693dfd3a220803c20effe4164/evidence/v1.0-checks.log"}
+
+$ git add .gitignore evidence/v1.0-checks.log
+Exit code: 0
+
+
+$ git commit -m "docs: retain build and verification evidence"
+Exit code: 0
+[dev a68787f] docs: retain build and verification evidence
+ 2 files changed, 22 insertions(+)
+ create mode 100644 evidence/v1.0-checks.log
+
+$ git push
+Exit code: 0
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+   145f035..a68787f  dev -> dev
+
+$ git rev-parse HEAD
+Exit code: 0
+a68787f9482743d112543a2911b4b69c983201b8
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/a68787f9482743d112543a2911b4b69c983201b8 --input C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\v1.0-status.json --jq {state,context,target_url}
+Exit code: 0
+{"context":"local-build-and-tests","state":"success","target_url":"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/a68787f9482743d112543a2911b4b69c983201b8/evidence/v1.0-checks.log"}
+
+$ git checkout master
+Exit code: 0
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+$ git pull --ff-only origin master
+Exit code: 0
+From https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance
+ * branch            master     -> FETCH_HEAD
+   206ff32..3604ec4  master     -> origin/master
+Updating 206ff32..3604ec4
+Fast-forward
+ .gitignore                           | 486 +++++++++++++++++++++++++++++++++++
+ DemoApp.Checks/DemoApp.Checks.csproj |  14 +
+ DemoApp.Checks/Program.cs            |  25 ++
+ DemoApp/DemoApp.csproj               |  10 +
+ DemoApp/GreetingDialog.cs            |  26 ++
+ DemoApp/Program.cs                   |   6 +
+ evidence/v1.0-checks.log             |  18 ++
+ scripts/Verify.ps1                   |   8 +
+ 8 files changed, 593 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 DemoApp.Checks/DemoApp.Checks.csproj
+ create mode 100644 DemoApp.Checks/Program.cs
+ create mode 100644 DemoApp/DemoApp.csproj
+ create mode 100644 DemoApp/GreetingDialog.cs
+ create mode 100644 DemoApp/Program.cs
+ create mode 100644 evidence/v1.0-checks.log
+ create mode 100644 scripts/Verify.ps1
+
+$ dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release
+Exit code: 0
+Определение проектов для восстановления...
+  Все проекты обновлены для восстановления.
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\bin\Release\net10.0\DemoApp.dll
+  DemoApp.Checks -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\bin\Release\net10.0\DemoApp.Checks.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:02.33
+
+$ dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build
+Exit code: 0
+PASS: Ukrainian name greeting
+PASS: Trims surrounding spaces
+PASS: Rejects blank name then accepts next
+PASS: EOF before name
+PASS: EOF after invalid name
+Result: 5 passed, 0 failed
+
+$ git rev-parse HEAD
+Exit code: 0
+3604ec4a066ae3283883575eeabfd4dc8e68bebd
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/3604ec4a066ae3283883575eeabfd4dc8e68bebd --input C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\v1.0-status.json --jq {state,context,target_url}
+Exit code: 0
+{"context":"local-build-and-tests","state":"success","target_url":"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/3604ec4a066ae3283883575eeabfd4dc8e68bebd/evidence/v1.0-checks.log"}
+
+$ git tag -a v1.0 -m "release: 1.0 — ask name and print"
+Exit code: 0
+
+
+$ git push origin v1.0
+Exit code: 0
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+ * [new tag]         v1.0 -> v1.0
+
+$ git checkout dev
+Exit code: 0
+Switched to branch 'dev'
+Your branch is up to date with 'origin/dev'.
+
+$ git merge --ff-only origin/master
+Exit code: 0
+Updating a68787f..3604ec4
+Fast-forward
+
+$ dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release
+Exit code: 0
+Определение проектов для восстановления...
+  Все проекты обновлены для восстановления.
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\bin\Release\net10.0\DemoApp.dll
+  DemoApp.Checks -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\bin\Release\net10.0\DemoApp.Checks.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:02.03
+
+$ dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build
+Exit code: 0
+PASS: Adult boundary at 18
+PASS: Underage boundary at 17
+PASS: Zero age is accepted
+PASS: Upper age limit
+PASS: Negative age is rejected
+PASS: Non-numeric age is rejected
+PASS: Empty age is rejected
+PASS: Age above range is rejected
+PASS: Trims surrounding name spaces
+PASS: Empty name then valid input
+PASS: EOF before name
+PASS: EOF before age
+Result: 12 passed, 0 failed
+
+$ dotnet run --project DemoApp/DemoApp.csproj --configuration Release --no-build
+Exit code: 0
+Введіть ваше ім’я: Введіть ваш вік: Вітаю Ярослав!
+Ім’я: Ярослав. Вік: 17.
+Статус: неповнолітня особа.
+
+$ git add .
+Exit code: 0
+
+
+$ git commit -m "feat: ask age and print adult/underage in console"
+Exit code: 0
+[dev 9456d2e] feat: ask age and print adult/underage in console
+ 4 files changed, 78 insertions(+), 19 deletions(-)
+ create mode 100644 evidence/v1.1-checks.log
+
+$ git push
+Exit code: 0
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+   a68787f..9456d2e  dev -> dev
+
+$ git rev-parse HEAD
+Exit code: 0
+9456d2eec6067159518229717da0b501ff80224c
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/9456d2eec6067159518229717da0b501ff80224c --input C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\v1.1-status.json --jq {state,context,target_url}
+Exit code: 0
+{"context":"local-build-and-tests","state":"success","target_url":"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/9456d2eec6067159518229717da0b501ff80224c/evidence/v1.1-checks.log"}
+
+$ git checkout dev
+Exit code: 0
+Already on 'dev'
+Your branch is up to date with 'origin/dev'.
+
+$ git pull --ff-only
+Exit code: 0
+Already up to date.
+
+$ git checkout -b release/1.1
+Exit code: 0
+Switched to a new branch 'release/1.1'
+
+$ git push -u origin release/1.1
+Exit code: 0
+remote: 
+remote: Create a pull request for 'release/1.1' on GitHub by visiting:        
+remote:      https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/pull/new/release/1.1        
+remote: 
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+ * [new branch]      release/1.1 -> release/1.1
+branch 'release/1.1' set up to track 'origin/release/1.1'.
+
+$ git add VERSION.md CHANGELOG.md
+Exit code: 0
+
+
+$ git commit -m "docs: prepare version 1.1.0-rc.1 and changelog"
+Exit code: 0
+[release/1.1 f3c8c28] docs: prepare version 1.1.0-rc.1 and changelog
+ 2 files changed, 18 insertions(+)
+ create mode 100644 CHANGELOG.md
+ create mode 100644 VERSION.md
+
+$ git push
+Exit code: 0
+To https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance.git
+   9456d2e..f3c8c28  release/1.1 -> release/1.1
+
+$ dotnet build DemoApp.Checks/DemoApp.Checks.csproj --configuration Release
+Exit code: 0
+Определение проектов для восстановления...
+  Все проекты обновлены для восстановления.
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp\bin\Release\net10.0\DemoApp.dll
+  DemoApp.Checks -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\repo\DemoApp.Checks\bin\Release\net10.0\DemoApp.Checks.dll
+
+Сборка успешно завершена.
+    Предупреждений: 0
+    Ошибок: 0
+
+Прошло времени 00:00:03.48
+
+$ dotnet run --project DemoApp.Checks/DemoApp.Checks.csproj --configuration Release --no-build
+Exit code: 0
+PASS: Adult boundary at 18
+PASS: Underage boundary at 17
+PASS: Zero age is accepted
+PASS: Upper age limit
+PASS: Negative age is rejected
+PASS: Non-numeric age is rejected
+PASS: Empty age is rejected
+PASS: Age above range is rejected
+PASS: Trims surrounding name spaces
+PASS: Empty name then valid input
+PASS: EOF before name
+PASS: EOF before age
+Result: 12 passed, 0 failed
+
+$ git rev-parse HEAD
+Exit code: 0
+f3c8c28ce71a0602514dd36912a6f50f854f666d
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api --method POST repos/aroslavmorocenec03-lab/pr-57-software-maintenance/statuses/f3c8c28ce71a0602514dd36912a6f50f854f666d --input C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\v1.1-status.json --jq {state,context,target_url}
+Exit code: 0
+{"context":"local-build-and-tests","state":"success","target_url":"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance/blob/f3c8c28ce71a0602514dd36912a6f50f854f666d/evidence/v1.1-checks.log"}
+
+$ git log --oneline --graph --all --decorate
+Exit code: 0
+* f3c8c28 (HEAD -> release/1.1, origin/release/1.1) docs: prepare version 1.1.0-rc.1 and changelog
+* 9456d2e (origin/dev, origin/HEAD, dev) feat: ask age and print adult/underage in console
+*   3604ec4 (tag: v1.0, origin/master, master) Merge pull request #1: release 1.0
+|\  
+| * a68787f docs: retain build and verification evidence
+| * 145f035 feat: add initial console app (ask name, print)
+|/  
+* 206ff32 init repo with README
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api repos/aroslavmorocenec03-lab/pr-57-software-maintenance --jq {full_name,default_branch,visibility,html_url}
+Exit code: 0
+{"default_branch":"dev","full_name":"aroslavmorocenec03-lab/pr-57-software-maintenance","html_url":"https://github.com/aroslavmorocenec03-lab/pr-57-software-maintenance","visibility":"public"}
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\Git-Labs\gh\bin\gh.exe api repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection --jq {required_status_checks,enforce_admins,required_pull_request_reviews,allow_force_pushes,allow_deletions}
+Exit code: 0
+{"allow_deletions":{"enabled":false},"allow_force_pushes":{"enabled":false},"enforce_admins":{"enabled":true,"url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/enforce_admins"},"required_pull_request_reviews":{"dismiss_stale_reviews":true,"require_code_owner_reviews":false,"require_last_push_approval":false,"required_approving_review_count":0,"url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_pull_request_reviews"},"required_status_checks":{"checks":[{"app_id":null,"context":"local-build-and-tests"}],"contexts":["local-build-and-tests"],"contexts_url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks/contexts","strict":true,"url":"https://api.github.com/repos/aroslavmorocenec03-lab/pr-57-software-maintenance/branches/master/protection/required_status_checks"}}
+
+$ git archive --format=zip --output C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\v1.0-source.zip v1.0
+Exit code: 0
+
+
+$ dotnet publish C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\source\v1.0\DemoApp\DemoApp.csproj -c Release -r win-x64 --self-contained false -o C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\programs\v1.0
+Exit code: 0
+Определение проектов для восстановления...
+  Восстановлен C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\source\v1.0\DemoApp\DemoApp.csproj (за 121 мс).
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\source\v1.0\DemoApp\bin\Release\net10.0\win-x64\DemoApp.dll
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\programs\v1.0\
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\programs\v1.0\DemoApp.exe
+Exit code: 0
+Введіть ваше ім’я: Вітаю Ярослав!
+
+$ git archive --format=zip --output C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\work\PR57\release-1.1-source.zip release/1.1
+Exit code: 0
+
+
+$ dotnet publish C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\source\release-1.1\DemoApp\DemoApp.csproj -c Release -r win-x64 --self-contained false -o C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\programs\release-1.1
+Exit code: 0
+Определение проектов для восстановления...
+  Восстановлен C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\source\release-1.1\DemoApp\DemoApp.csproj (за 121 мс).
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\source\release-1.1\DemoApp\bin\Release\net10.0\win-x64\DemoApp.dll
+  DemoApp -> C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\programs\release-1.1\
+
+$ C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\programs\release-1.1\DemoApp.exe
+Exit code: 0
+Введіть ваше ім’я: Введіть ваш вік: Вітаю Ярослав!
+Ім’я: Ярослав. Вік: 17.
+Статус: неповнолітня особа.
+
+$ git bundle create C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\PostMaintenance.bundle --all
+Exit code: 0
+
+
+$ git bundle verify C:\Users\ksvit\Documents\Codex\2026-11-12\d-x20\outputs\ПР-57\PostMaintenance.bundle
+Exit code: 0
+C:/Users/ksvit/Documents/Codex/2026-11-12/d-x20/outputs/ПР-57/PostMaintenance.bundle is okay
+The bundle contains these 9 refs:
+9456d2eec6067159518229717da0b501ff80224c refs/heads/dev
+3604ec4a066ae3283883575eeabfd4dc8e68bebd refs/heads/master
+f3c8c28ce71a0602514dd36912a6f50f854f666d refs/heads/release/1.1
+9456d2eec6067159518229717da0b501ff80224c refs/remotes/origin/HEAD
+9456d2eec6067159518229717da0b501ff80224c refs/remotes/origin/dev
+3604ec4a066ae3283883575eeabfd4dc8e68bebd refs/remotes/origin/master
+f3c8c28ce71a0602514dd36912a6f50f854f666d refs/remotes/origin/release/1.1
+60a23a595082a5baa0f1084bba69eea2c2ec5d0a refs/tags/v1.0
+f3c8c28ce71a0602514dd36912a6f50f854f666d HEAD
+The bundle records a complete history.
+The bundle uses this hash algorithm: sha1
